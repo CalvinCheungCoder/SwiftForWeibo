@@ -9,6 +9,11 @@
 import UIKit
 
 class WBBaseViewController: UIViewController {
+    
+    // 自定义导航条
+    lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
+    
+    lazy var navItem = UINavigationItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +22,13 @@ class WBBaseViewController: UIViewController {
         
         MakeUI()
     }
+    
+    // 重写title的setter
+    override var title: String?{
+        didSet {
+            navItem.title = title
+        }
+    }
 }
 
 extension WBBaseViewController {
@@ -24,5 +36,10 @@ extension WBBaseViewController {
     func MakeUI(){
         
         view.backgroundColor = UIColor.cz_random()
+        
+        // 添加导航条
+        view.addSubview(navigationBar)
+        // 将Item设置给Bar
+        navigationBar.items = [navItem]
     }
 }

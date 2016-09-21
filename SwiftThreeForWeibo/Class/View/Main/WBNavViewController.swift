@@ -18,6 +18,16 @@ import UIKit
 class WBNavViewController: UINavigationController {
     
 //    var tabbarHideStyle = TabbarHideStyle.tabbarHideWithNoAnimation
+    
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        // 隐藏Nav
+        navigationBar.isHidden = true
+    }
+    
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
