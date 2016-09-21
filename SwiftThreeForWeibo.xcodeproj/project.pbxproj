@@ -35,6 +35,7 @@
 		925779DB1D92A01B00AFD16E /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779CD1D92A01B00AFD16E /* UIScreen+CZAddition.m */; };
 		925779DC1D92A01B00AFD16E /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779CF1D92A01B00AFD16E /* UIView+CZAddition.m */; };
 		925779DD1D92A01B00AFD16E /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779D11D92A01B00AFD16E /* UIViewController+CZAddition.m */; };
+		925779E11D92A92E00AFD16E /* UIBarButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		925779D01D92A01B00AFD16E /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		925779D11D92A01B00AFD16E /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		925779DF1D92A16400AFD16E /* WBBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBridge.h; sourceTree = "<group>"; };
+		925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 			children = (
 				925779AE1D92926400AFD16E /* Bundle+Extensions.swift */,
 				925779B41D92968100AFD16E /* UIView+Extension.swift */,
+				925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				925779651D92250B00AFD16E /* WBBaseViewController.swift in Sources */,
 				925779DD1D92A01B00AFD16E /* UIViewController+CZAddition.m in Sources */,
 				925779B51D92968100AFD16E /* UIView+Extension.swift in Sources */,
+				925779E11D92A92E00AFD16E /* UIBarButton+Extension.swift in Sources */,
 				925779631D9224F100AFD16E /* WBNavViewController.swift in Sources */,
 				925779691D92255D00AFD16E /* DiscoverViewController.swift in Sources */,
 				925779D81D92A01B00AFD16E /* UIButton+CZAddition.m in Sources */,

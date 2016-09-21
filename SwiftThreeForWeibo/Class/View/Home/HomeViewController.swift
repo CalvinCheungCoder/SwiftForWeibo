@@ -32,7 +32,6 @@ extension HomeViewController {
     
     override func MakeUI() {
         
-        // 设置导航栏
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(showFridens))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFridens))
     }
 }
