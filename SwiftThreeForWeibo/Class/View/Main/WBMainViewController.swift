@@ -29,7 +29,7 @@ class WBMainViewController: UITabBarController {
         addChildViewController(childController: HomeViewController(), title: "首页", imageName: "tabbar_home")
         addChildViewController(childController: MessageViewController(), title: "消息", imageName: "tabbar_message_center")
         addChildViewController(childController: DiscoverViewController(), title: "发现", imageName: "tabbar_discover")
-        addChildViewController(childController: ProfileViewController(), title: "我的", imageName: "tabbar_profile")
+        addChildViewController(childController: ProfileViewController(), title: "我", imageName: "tabbar_profile")
     }
 
     func addChildViewController(childController: UIViewController, title: String, imageName: String) {
