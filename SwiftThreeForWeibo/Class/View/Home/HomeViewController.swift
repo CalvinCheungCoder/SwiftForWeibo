@@ -36,10 +36,16 @@ class HomeViewController: WBBaseViewController {
     // 加载数据
     override func loadData() {
         
-        for i in 0..<10 {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             
-            statusList.insert(i.description, at: 0)
+            for i in 0..<20 {
+                
+                self.statusList.insert(i.description, at: 0)
+            }
+            
+            self.tableView?.reloadData()
         }
+        
     }
 
 }
