@@ -1,9 +1,9 @@
 //
 //  Bundle+Extensions.swift
-//  反射机制
+//  SwiftThreeForWeibo
 //
-//  Created by apple on 16/6/29.
-//  Copyright © 2016年 itcast. All rights reserved.
+//  Created by 张丁豪 on 16/9/21.
+//  Copyright © 2016年 张丁豪. All rights reserved.
 //
 
 import Foundation

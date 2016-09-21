@@ -9,6 +9,7 @@
 import UIKit
 
 class WBMainViewController: UITabBarController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,20 @@ class WBMainViewController: UITabBarController {
         addChildViewController(childController: DiscoverViewController(), title: "发现", imageName: "tabbar_discover")
         addChildViewController(childController: ProfileViewController(), title: "我", imageName: "tabbar_profile")
     }
+    
+    /**
+     portrait    : 竖屏，肖像
+     landscape   : 横屏，风景画
+     
+     - 使用代码控制设备的方向，好处，可以在在需要横屏的时候，单独处理！
+     - 设置支持的方向之后，当前的控制器及子控制器都会遵守这个方向！
+     - 如果播放视频，通常是通过 modal 展现的！
+     */
+    
+    // Method 'supportedInterfaceOrientations()' with Objective-C selector 'supportedInterfaceOrientations' conflicts with getter for 'supportedInterfaceOrientations' from superclass 'UIViewController' with the same Objective-C selector
+//    func supportedInterfaceOrientations() -> UIInterfaceOrientationMask{
+//        return .portrait
+//    }
 
     func addChildViewController(childController: UIViewController, title: String, imageName: String) {
         // 设置tabBar的图片和文字
@@ -47,6 +62,7 @@ class WBMainViewController: UITabBarController {
         addChildViewController(navigationController)
         }
     }
+
 
 // 用延展实现代理方法
 extension WBMainViewController:WBTabBarDelegate {
