@@ -10,6 +10,9 @@ import UIKit
 
 class WBBaseViewController: UIViewController {
     
+    // 表格
+    var tableView: UITableView?
+    
     // 自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
     // 自定义导航条目
@@ -31,11 +34,31 @@ class WBBaseViewController: UIViewController {
     }
 }
 
+// MARK:--设置界面
 extension WBBaseViewController {
     
     func MakeUI(){
         
         view.backgroundColor = UIColor.cz_random()
+        
+        setUpNavigationBar()
+        setUpTableView()
+    }
+    
+    // 设置表格
+    private func setUpTableView() {
+        
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        
+        view.insertSubview(tableView!, belowSubview: navigationBar)
+        
+        // 设置数据源和代理
+        tableView?.delegate = self
+        tableView?.dataSource = self
+    }
+    
+    // 设置 NavigationBar
+    private func setUpNavigationBar(){
         
         // 添加导航条
         view.addSubview(navigationBar)
@@ -47,3 +70,22 @@ extension WBBaseViewController {
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray]
     }
 }
+
+// MARK:-- UITableViewDataSource,UITableViewDelegate
+extension WBBaseViewController:UITableViewDataSource,UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    // 基类只准备方法，子类负责具体实现
+    // 子类数据源不需要Super
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return UITableViewCell()
+    }
+    
+}
+
+
+

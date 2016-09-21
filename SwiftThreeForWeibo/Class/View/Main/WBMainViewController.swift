@@ -68,7 +68,10 @@ class WBMainViewController: UITabBarController {
 extension WBMainViewController:WBTabBarDelegate {
     
     func didSelectedComposeButton() {
-        print("我是代理对象调用过来的")
+        
+        let vc = UIViewController()
+        
+        present(vc, animated: true, completion: nil)
     }
 
 }

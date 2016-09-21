@@ -241,10 +241,7 @@
 		9257795C1D92249D00AFD16E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				925779601D9224D900AFD16E /* WBMainViewController.swift */,
-				925779621D9224F100AFD16E /* WBNavViewController.swift */,
-				925779641D92250B00AFD16E /* WBBaseViewController.swift */,
-				925779B01D92956A00AFD16E /* WBTabBar.swift */,
+				925779E21D92C65700AFD16E /* 主控制器 */,
 				925779B61D92994600AFD16E /* WBDemoViewController.swift */,
 			);
 			path = Main;
@@ -313,6 +310,17 @@
 				925779D11D92A01B00AFD16E /* UIViewController+CZAddition.m */,
 			);
 			path = Additions;
+			sourceTree = "<group>";
+		};
+		925779E21D92C65700AFD16E /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				925779601D9224D900AFD16E /* WBMainViewController.swift */,
+				925779621D9224F100AFD16E /* WBNavViewController.swift */,
+				925779641D92250B00AFD16E /* WBBaseViewController.swift */,
+				925779B01D92956A00AFD16E /* WBTabBar.swift */,
+			);
+			name = "主控制器";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
