@@ -15,13 +15,13 @@ class WBBaseViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
+        MakeUI()
     }
 }
 
-extension WBBaseViewController{
+extension WBBaseViewController {
     
-    private func MakeUI(){
+    func MakeUI(){
         
         view.backgroundColor = UIColor.cz_random()
     }
