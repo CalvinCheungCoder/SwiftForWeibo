@@ -57,12 +57,13 @@ extension WBBaseViewController {
     
     @objc func login() {
         
+        print("登录")
     }
     
     
     @objc func register() {
         
-        
+        print("注册")
     }
     
 }
@@ -84,7 +85,7 @@ extension WBBaseViewController {
     }
     
      // 设置表格
-    private func setUpTableView() {
+    func setUpTableView() {
         
         tableView = UITableView(frame: view.bounds, style: .plain)
         
@@ -122,6 +123,10 @@ extension WBBaseViewController {
         visitorView.loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
         visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         
+        // 3.设置导航条按钮
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+        
     }
     
     // 设置 NavigationBar
@@ -135,6 +140,8 @@ extension WBBaseViewController {
         navigationBar.barTintColor = UIColor.cz_color(withHex: 0xF6F6F6)
         // 设置 Navtitle 字体颜色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.darkGray]
+        
+        navigationBar.tintColor = UIColor.orange
     }
 }
 

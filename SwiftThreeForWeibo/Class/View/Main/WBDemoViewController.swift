@@ -34,10 +34,11 @@ class WBDemoViewController: WBBaseViewController {
 
 extension WBDemoViewController {
     
-    override func MakeUI() {
-    
-        super.MakeUI()
+    override func setUpTableView() {
+        
+        super.setUpTableView()
         
         navItem.rightBarButtonItem = UIBarButtonItem(title: "下一个", target: self, action: #selector(showNext))
     }
+    
 }
