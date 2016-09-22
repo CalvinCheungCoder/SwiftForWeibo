@@ -84,9 +84,9 @@ extension HomeViewController{
 
 extension HomeViewController {
     
-    override func MakeUI() {
+    override func setUpTableView() {
         
-        super.MakeUI()
+        super.setUpTableView()
         
         navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFridens))
         
