@@ -5,6 +5,9 @@
 //  Created by 张丁豪 on 16/9/21.
 //  Copyright © 2016年 张丁豪. All rights reserved.
 //
+// GitHub地址：https://github.com/CalvinCheungCoder/SwiftForWeibo
+// QQ:984382258
+
 
 import UIKit
 
@@ -23,85 +26,26 @@ class WBMainViewController: UITabBarController {
         
         setupChildControllers()
         setupComposeButton()
-        
-        
-        
-
-        
-//        // 添加自定义tabBar，利用kvc给只读属性赋值
-//        let ZDHTabBar = WBTabBar()
-//        // 设置代理
-//        ZDHTabBar.WBDelegate = self
-//        // 定义自定义tabBar的闭包
-//        // 在此使用self会产生循环引用, 解决办法使用[weak self]
-//        ZDHTabBar.composeButtonCloser = { [weak self] in
-//            print("我是闭包调用过来的")
-//        }
-//        setValue(ZDHTabBar, forKey: "tabBar")
-//        
-//        // 添加子控制器
-//        addChildViewController(childController: HomeViewController(), title: "首页", imageName: "tabbar_home")
-//        addChildViewController(childController: MessageViewController(), title: "消息", imageName: "tabbar_message_center")
-//        addChildViewController(childController: DiscoverViewController(), title: "发现", imageName: "tabbar_discover")
-//        addChildViewController(childController: ProfileViewController(), title: "我", imageName: "tabbar_profile")
     }
-    
 }
-    
-    // Method 'supportedInterfaceOrientations()' with Objective-C selector 'supportedInterfaceOrientations' conflicts with getter for 'supportedInterfaceOrientations' from superclass 'UIViewController' with the same Objective-C selector
-//    func supportedInterfaceOrientations() -> UIInterfaceOrientationMask{
-//        return .portrait
-//    }
-
-//    func addChildViewController(childController: UIViewController, title: String, imageName: String) {
-//        // 设置tabBar的图片和文字
-//        childController.tabBarItem.image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
-//        childController.tabBarItem.selectedImage = UIImage(named: "\(imageName)_highlighted")?.withRenderingMode(.alwaysOriginal)
-//        // 设置文字选中的颜色
-//        childController.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.orange], for: UIControlState.selected)
-//        // 设置文字大小，
-//        childController.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 12)], for: UIControlState.normal)
-//        // 设置文字内容
-//        childController.title = title
-//        // 创建导航控制器
-//        let navigationController = WBNavViewController(rootViewController: childController)
-//        addChildViewController(navigationController)
-//        }
-//    }
-
-
-// 用延展实现代理方法
-//extension WBMainViewController:WBTabBarDelegate {
-//    
-//    func didSelectedComposeButton() {
-//        
-//        let vc = UIViewController()
-//        
-//        present(vc, animated: true, completion: nil)
-//    }
-//
-//}
-
 
 // MARK: - UITabBarControllerDelegate
 extension WBMainViewController: UITabBarControllerDelegate {
     
-    /// 将要选择 TabBarItem
-    ///
-    /// - parameter tabBarController: tabBarController
-    /// - parameter viewController:   目标控制器
-    ///
-    /// - returns: 是否切换到目标控制器
+    // 将要选择 TabBarItem
+    // - parameter tabBarController: tabBarController
+    // - parameter viewController:   目标控制器
+    // - returns: 是否切换到目标控制器
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
-        // 1> 获取控制器在数组中的索引
+        // 1.获取控制器在数组中的索引
         let idx = (childViewControllers as NSArray).index(of: viewController)
         
-        // 2> 判断当前索引是首页，同时 idx 也是首页，重复点击首页的按钮
+        // 2.判断当前索引是首页，同时 idx 也是首页，重复点击首页的按钮
         if selectedIndex == 0 && idx == selectedIndex {
             
             print("点击首页")
-            // 3> 让表格滚动到顶部
+            // 3.让表格滚动到顶部
             // a) 获取到控制器
             let nav = childViewControllers[0] as! UINavigationController
             let vc = nav.childViewControllers[0] as! HomeViewController
@@ -109,14 +53,14 @@ extension WBMainViewController: UITabBarControllerDelegate {
             // b) 滚动到顶部
             vc.tableView?.setContentOffset(CGPoint(x: 0, y: -64), animated: true)
             
-            // 4> 刷新数据 － 增加延迟，是保证表格先滚动到顶部再刷新
+            // 4.刷新数据 － 增加延迟，是保证表格先滚动到顶部再刷新
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
                 
                 vc.loadData()
             })
             
             
-            // 5> 清除 tabItem 的 badgeNumber
+            // 5.清除 tabItem 的 badgeNumber
             vc.tabBarItem.badgeValue = nil
             UIApplication.shared.applicationIconBadgeNumber = 0
         }

@@ -5,6 +5,9 @@
 //  Created by 张丁豪 on 16/9/21.
 //  Copyright © 2016年 张丁豪. All rights reserved.
 //
+// GitHub地址：https://github.com/CalvinCheungCoder/SwiftForWeibo
+// QQ:984382258
+
 
 import UIKit
 
@@ -47,6 +50,21 @@ class WBBaseViewController: UIViewController {
         
         refreshControl?.endRefreshing()
     }
+}
+
+// 设置访客监听方法
+extension WBBaseViewController {
+    
+    @objc func login() {
+        
+    }
+    
+    
+    @objc func register() {
+        
+        
+    }
+    
 }
 
 // MARK:--设置界面
@@ -100,8 +118,9 @@ extension WBBaseViewController {
         
         // 1. 设置访客视图信息
         visitorView.visitorInfo = visitorInfoDictionary
-        
-        
+        // 2.设置注册和登录监听
+        visitorView.loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
+        visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         
     }
     

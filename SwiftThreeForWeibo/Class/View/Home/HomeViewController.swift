@@ -5,6 +5,10 @@
 //  Created by 张丁豪 on 16/9/21.
 //  Copyright © 2016年 张丁豪. All rights reserved.
 //
+// GitHub地址：https://github.com/CalvinCheungCoder/SwiftForWeibo
+// QQ:984382258
+
+
 
 import UIKit
 
@@ -36,17 +40,15 @@ class HomeViewController: WBBaseViewController {
     // 加载数据
     override func loadData() {
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-        
-            for i in 0..<20 {
+        for i in 0..<20 {
+            
+            if self.isPullup {
                 
-                if self.isPullup {
-                    
-                    self.statusList.append("上拉\(i)")
-                }
-                
-                self.statusList.insert(i.description, at: 0)
+                self.statusList.append("上拉\(i)")
             }
+            
+            self.statusList.insert(i.description, at: 0)
+        }
         
         
         self.refreshControl?.endRefreshing()
@@ -54,7 +56,6 @@ class HomeViewController: WBBaseViewController {
         self.isPullup = false
         
         self.tableView?.reloadData()
-//        }
         
     }
 

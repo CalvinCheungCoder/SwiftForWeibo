@@ -5,6 +5,10 @@
 //  Created by 张丁豪 on 2016/9/22.
 //  Copyright © 2016年 张丁豪. All rights reserved.
 //
+// GitHub地址：https://github.com/CalvinCheungCoder/SwiftForWeibo
+// QQ:984382258
+
+
 
 import UIKit
 
@@ -114,7 +118,7 @@ extension WBVisitorView {
             v.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        // 3. 自动布局
+        // 自动布局
         let margin: CGFloat = 20.0
         
         // 图像视图

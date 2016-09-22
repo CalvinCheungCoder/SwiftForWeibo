@@ -5,20 +5,14 @@
 //  Created by 张丁豪 on 16/9/21.
 //  Copyright © 2016年 张丁豪. All rights reserved.
 //
+// GitHub地址：https://github.com/CalvinCheungCoder/SwiftForWeibo
+// QQ:984382258
+
+
 
 import UIKit
 
-//enum TabbarHideStyle {
-//    //    有动画
-//    case tabbarHideWithAnimation
-//    //    无动画
-//    case tabbarHideWithNoAnimation
-//}
-
 class WBNavViewController: UINavigationController {
-    
-//    var tabbarHideStyle = TabbarHideStyle.tabbarHideWithNoAnimation
-    
     
     override func viewDidLoad() {
         
@@ -57,7 +51,7 @@ class WBNavViewController: UINavigationController {
         super.pushViewController(viewController, animated: true)
     }
     
-    /// POP 返回到上一级控制器
+    // POP 返回到上一级控制器
     @objc private func popToParent() {
         popViewController(animated: true)
     }

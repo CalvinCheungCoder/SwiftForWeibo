@@ -20,7 +20,6 @@
 		9257796B1D92256600AFD16E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257796A1D92256600AFD16E /* MessageViewController.swift */; };
 		9257796D1D92256F00AFD16E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257796C1D92256F00AFD16E /* ProfileViewController.swift */; };
 		925779AF1D92926400AFD16E /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779AE1D92926400AFD16E /* Bundle+Extensions.swift */; };
-		925779B11D92956A00AFD16E /* WBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779B01D92956A00AFD16E /* WBTabBar.swift */; };
 		925779B51D92968100AFD16E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779B41D92968100AFD16E /* UIView+Extension.swift */; };
 		925779B71D92994600AFD16E /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779B61D92994600AFD16E /* WBDemoViewController.swift */; };
 		925779D21D92A01B00AFD16E /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779BB1D92A01B00AFD16E /* NSArray+Log.m */; };
@@ -77,7 +76,6 @@
 		9257796A1D92256600AFD16E /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		9257796C1D92256F00AFD16E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		925779AE1D92926400AFD16E /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
-		925779B01D92956A00AFD16E /* WBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBar.swift; sourceTree = "<group>"; };
 		925779B41D92968100AFD16E /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		925779B61D92994600AFD16E /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		925779B91D92A01B00AFD16E /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
@@ -324,7 +322,6 @@
 				925779601D9224D900AFD16E /* WBMainViewController.swift */,
 				925779621D9224F100AFD16E /* WBNavViewController.swift */,
 				925779641D92250B00AFD16E /* WBBaseViewController.swift */,
-				925779B01D92956A00AFD16E /* WBTabBar.swift */,
 			);
 			name = "主控制器";
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				925779D91D92A01B00AFD16E /* UIColor+CZAddition.m in Sources */,
-				925779B11D92956A00AFD16E /* WBTabBar.swift in Sources */,
 				925779DB1D92A01B00AFD16E /* UIScreen+CZAddition.m in Sources */,
 				925779671D92255100AFD16E /* HomeViewController.swift in Sources */,
 				925779DA1D92A01B00AFD16E /* UILabel+CZAddition.m in Sources */,
