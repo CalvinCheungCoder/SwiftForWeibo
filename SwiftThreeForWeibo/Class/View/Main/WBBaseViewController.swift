@@ -10,6 +10,8 @@ import UIKit
 
 class WBBaseViewController: UIViewController {
     
+    // 访客视图信息字典
+    var visitorInfoDictionary: [String: String]?
     // 表格
     var tableView: UITableView?
     // 刷新控件
@@ -89,11 +91,17 @@ extension WBBaseViewController {
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
+    // 设置访客视图
     private func setupVisitorView() {
         
         let visitorView = WBVisitorView(frame: view.bounds)
         
         view.insertSubview(visitorView, belowSubview: navigationBar)
+        
+        // 1. 设置访客视图信息
+        visitorView.visitorInfo = visitorInfoDictionary
+        
+        
         
     }
     

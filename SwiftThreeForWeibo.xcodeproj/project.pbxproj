@@ -37,6 +37,7 @@
 		925779DD1D92A01B00AFD16E /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779D11D92A01B00AFD16E /* UIViewController+CZAddition.m */; };
 		925779E11D92A92E00AFD16E /* UIBarButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */; };
 		92D3526B1D937ABE00156BE9 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3526A1D937ABE00156BE9 /* WBVisitorView.swift */; };
+		92D3526D1D938B8600156BE9 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 92D3526C1D938B8600156BE9 /* main.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		925779DF1D92A16400AFD16E /* WBBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBridge.h; sourceTree = "<group>"; };
 		925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton+Extension.swift"; sourceTree = "<group>"; };
 		92D3526A1D937ABE00156BE9 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
+		92D3526C1D938B8600156BE9 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 		925779E21D92C65700AFD16E /* 主控制器 */ = {
 			isa = PBXGroup;
 			children = (
+				92D3526C1D938B8600156BE9 /* main.json */,
 				925779601D9224D900AFD16E /* WBMainViewController.swift */,
 				925779621D9224F100AFD16E /* WBNavViewController.swift */,
 				925779641D92250B00AFD16E /* WBBaseViewController.swift */,
@@ -445,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D3526D1D938B8600156BE9 /* main.json in Resources */,
 				925779331D92221600AFD16E /* LaunchScreen.storyboard in Resources */,
 				925779301D92221600AFD16E /* Assets.xcassets in Resources */,
 			);
