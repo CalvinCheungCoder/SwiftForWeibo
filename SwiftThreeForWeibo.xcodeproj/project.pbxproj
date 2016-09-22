@@ -36,6 +36,7 @@
 		925779DC1D92A01B00AFD16E /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779CF1D92A01B00AFD16E /* UIView+CZAddition.m */; };
 		925779DD1D92A01B00AFD16E /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 925779D11D92A01B00AFD16E /* UIViewController+CZAddition.m */; };
 		925779E11D92A92E00AFD16E /* UIBarButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */; };
+		92D3526B1D937ABE00156BE9 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3526A1D937ABE00156BE9 /* WBVisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		925779D11D92A01B00AFD16E /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		925779DF1D92A16400AFD16E /* WBBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBBridge.h; sourceTree = "<group>"; };
 		925779E01D92A92E00AFD16E /* UIBarButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButton+Extension.swift"; sourceTree = "<group>"; };
+		92D3526A1D937ABE00156BE9 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		925779591D92249D00AFD16E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92D352691D937A9400156BE9 /* VisitorView */,
 				9257795A1D92249D00AFD16E /* Discover */,
 				9257795B1D92249D00AFD16E /* Home */,
 				9257795C1D92249D00AFD16E /* Main */,
@@ -321,6 +324,14 @@
 				925779B01D92956A00AFD16E /* WBTabBar.swift */,
 			);
 			name = "主控制器";
+			sourceTree = "<group>";
+		};
+		92D352691D937A9400156BE9 /* VisitorView */ = {
+			isa = PBXGroup;
+			children = (
+				92D3526A1D937ABE00156BE9 /* WBVisitorView.swift */,
+			);
+			name = VisitorView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +493,7 @@
 				925779291D92221600AFD16E /* AppDelegate.swift in Sources */,
 				925779D71D92A01B00AFD16E /* NSString+CZPath.m in Sources */,
 				925779D61D92A01B00AFD16E /* NSString+CZHash.m in Sources */,
+				92D3526B1D937ABE00156BE9 /* WBVisitorView.swift in Sources */,
 				925779B71D92994600AFD16E /* WBDemoViewController.swift in Sources */,
 				9257796D1D92256F00AFD16E /* ProfileViewController.swift in Sources */,
 				9257796B1D92256600AFD16E /* MessageViewController.swift in Sources */,

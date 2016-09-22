@@ -15,6 +15,10 @@ class WBBaseViewController: UIViewController {
     // 刷新控件
     var refreshControl:UIRefreshControl?
     
+    var isPullup = false
+    
+    var userLogin = false
+    
     // 自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
     // 自定义导航条目
@@ -39,6 +43,7 @@ class WBBaseViewController: UIViewController {
     // 子类实现具体方法
     func loadData() {
         
+        refreshControl?.endRefreshing()
     }
 }
 
@@ -47,16 +52,18 @@ extension WBBaseViewController {
     
     func MakeUI(){
         
-        view.backgroundColor = UIColor.cz_random()
+//        view.backgroundColor = UIColor.cz_random()
         
         // 取消自动缩进，如果隐藏了导航栏会自动缩进20
         automaticallyAdjustsScrollViewInsets = false
         
         setUpNavigationBar()
-        setUpTableView()
+//        setUpTableView()
+        
+        userLogin ? setUpTableView() : setupVisitorView()
     }
     
-    // 设置表格
+     // 设置表格
     private func setUpTableView() {
         
         tableView = UITableView(frame: view.bounds, style: .plain)
@@ -80,6 +87,14 @@ extension WBBaseViewController {
         tableView?.addSubview(refreshControl!)
         // 3.添加监听方法
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    private func setupVisitorView() {
+        
+        let visitorView = WBVisitorView(frame: view.bounds)
+        
+        view.insertSubview(visitorView, belowSubview: navigationBar)
+        
     }
     
     // 设置 NavigationBar
@@ -108,6 +123,31 @@ extension WBBaseViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         return UITableViewCell()
+    }
+    
+    // 上拉刷新
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        // row
+        let row = indexPath.row
+        
+        let section = tableView.numberOfSections - 1
+        
+        print("section -- \(section)")
+        
+        if row < 0 || section < 0{
+            return
+        }
+        
+        let count = tableView.numberOfRows(inSection: section)
+        
+        if row == (count - 1) && !isPullup {
+            print("上拉刷新")
+            
+            isPullup = true
+            loadData()
+        }
+        
     }
     
 }
