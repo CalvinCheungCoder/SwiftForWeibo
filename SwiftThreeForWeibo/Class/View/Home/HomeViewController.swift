@@ -40,6 +40,21 @@ class HomeViewController: WBBaseViewController {
     // 加载数据
     override func loadData() {
         
+        // 加载微博数据
+        let urlStr = "https://api.weibo.com/2/statuses/public_timeline.json"
+        let params = ["access_token":"2.00L89cXD0lrN5Kd96b929f630z_F2e"]
+        
+
+        
+        WBNetworkManager.shared.get(urlStr, parameters: params, progress: nil, success: { (_,json) in
+            print(json)
+            }) { (_, Error) in
+                
+                print("网络请求失败")
+        }
+        
+        print("开始加载数据\(WBNetworkManager.shared)")
+        
         for i in 0..<20 {
             
             if self.isPullup {
@@ -50,13 +65,11 @@ class HomeViewController: WBBaseViewController {
             self.statusList.insert(i.description, at: 0)
         }
         
-        
         self.refreshControl?.endRefreshing()
         
         self.isPullup = false
         
         self.tableView?.reloadData()
-        
     }
 
 }

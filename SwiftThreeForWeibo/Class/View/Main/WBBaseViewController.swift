@@ -22,7 +22,7 @@ class WBBaseViewController: UIViewController {
     
     var isPullup = false
     
-    var userLogin = false
+    var userLogin = true
     
     // 自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.cz_screenWidth(), height: 64))
@@ -73,13 +73,10 @@ extension WBBaseViewController {
     
     func MakeUI(){
         
-//        view.backgroundColor = UIColor.cz_random()
-        
         // 取消自动缩进，如果隐藏了导航栏会自动缩进20
         automaticallyAdjustsScrollViewInsets = false
         
         setUpNavigationBar()
-//        setUpTableView()
         
         userLogin ? setUpTableView() : setupVisitorView()
     }
