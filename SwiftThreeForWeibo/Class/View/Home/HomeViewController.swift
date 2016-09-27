@@ -45,15 +45,11 @@ class HomeViewController: WBBaseViewController {
         let params = ["access_token":"2.00L89cXD0lrN5Kd96b929f630z_F2e"]
         
 
-        
-        WBNetworkManager.shared.get(urlStr, parameters: params, progress: nil, success: { (_,json) in
-            print(json)
-            }) { (_, Error) in
-                
-                print("网络请求失败")
+        WBNetworkManager.shared.request(type: .GET, url: urlStr, params: params) { (res, Error) in
+            print("res\(res)")
+            print("error\(Error)")
         }
         
-        print("开始加载数据\(WBNetworkManager.shared)")
         
         for i in 0..<20 {
             

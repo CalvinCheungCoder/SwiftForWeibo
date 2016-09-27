@@ -19,6 +19,8 @@ enum WBHTTPMethod {
 // 网络管理工具
 class WBNetworkManager: AFHTTPSessionManager {
     
+    
+    
     // 静态区／常量／闭包
     // 在第一次访问时，执行闭包，并且将结果保存在 shared 常量中
     static let shared: WBNetworkManager = {
@@ -34,35 +36,28 @@ class WBNetworkManager: AFHTTPSessionManager {
     }()
     
     
-    
-    
     // 封装 AFN 的 GET / POST 请求
-//    func request(method: WBHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: AnyObject?, _ isSuccess: Bool)->()) {
-//        
-//        // 成功回调
-//        let success = { (task: URLSessionDataTask, json: AnyObject?) -> () in
-//            
-//            completion(json, true)
-//        }
-//        
-//        // 失败回调
-//        let failure = { (task: URLSessionDataTask?, error: NSError) -> () in
-//            
-//            print("网络请求错误 \(error)")
-//            
-//            completion(nil, false)
-//        }
-//        
-//        if method == .GET {
-//            
-//            
-//            get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
-//            
-//        } else {
-//            
-//            post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
-//        }
-//    }
- 
+    func request(type: WBHTTPMethod = .GET, url: String, params: Any?, callBack: @escaping (Any?, Error?) -> ()) {
+        
+        if type == .GET {
+            
+            get(url, parameters: params, progress: nil, success: { (_, response) in
+                callBack(response, nil)
+                
+                }, failure: { (_, error) in
+                    callBack(nil, error)
+            })
+            
+        } else {
+            
+            post(url, parameters: params, progress: nil, success: { (_, response) in
+                callBack(response, nil)
+                }, failure: { (_, error) in
+                    callBack(nil, error)
+            })
+            
+        }
+        
+    }
 
 }
