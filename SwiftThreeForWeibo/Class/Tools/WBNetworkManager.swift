@@ -34,42 +34,35 @@ class WBNetworkManager: AFHTTPSessionManager {
     }()
     
     
-    /*
+    
     
     // 封装 AFN 的 GET / POST 请求
-    func request(method: WBHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: AnyObject?, _ isSuccess: Bool)->()) {
-        
-        // 成功回调
-        let success = { (task: URLSessionDataTask, json: AnyObject?)->() in
-            
-            completion(json, true)
-        }
-        
-        // 失败回调
-        let failure = { (task: URLSessionDataTask?, error: NSError)->() in
-            
-            print("网络请求错误 \(error)")
-            
-            completion(nil, false)
-        }
-        
-        if method == .GET {
-            
-            // Cannot convert value of type '(URLSessionDataTask, AnyObject?) -> ()' to expected argument type '((URLSessionDataTask, Any?) -> Void)?'
-            get(URLString, parameters: parameters, progress: nil, success: { (task:URLSessionDataTask,json:AnyObject?) -> ()? in
-                
-                    completion(json, true)
-                
-                }, failure: { (task: URLSessionDataTask?, error: NSError) -> () in
-                    
-                    completion(nil, false)
-            })
-            
-        } else {
-            
-            post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
-        }
-    }
+//    func request(method: WBHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]?, completion: @escaping (_ json: AnyObject?, _ isSuccess: Bool)->()) {
+//        
+//        // 成功回调
+//        let success = { (task: URLSessionDataTask, json: AnyObject?) -> () in
+//            
+//            completion(json, true)
+//        }
+//        
+//        // 失败回调
+//        let failure = { (task: URLSessionDataTask?, error: NSError) -> () in
+//            
+//            print("网络请求错误 \(error)")
+//            
+//            completion(nil, false)
+//        }
+//        
+//        if method == .GET {
+//            
+//            
+//            get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
+//            
+//        } else {
+//            
+//            post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
+//        }
+//    }
  
- */
+
 }

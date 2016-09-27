@@ -14,7 +14,6 @@
 		3E0B5A6A1D9521A000E8803D /* WBStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B5A691D9521A000E8803D /* WBStatusPicture.swift */; };
 		3E0B5A6C1D9521F800E8803D /* WBDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B5A6B1D9521F800E8803D /* WBDate+Extensions.swift */; };
 		3E0B5A6E1D95224900E8803D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B5A6D1D95224900E8803D /* String+Extensions.swift */; };
-		3E0B5AAA1D95253C00E8803D /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B5AA91D95253C00E8803D /* WBStatusListViewModel.swift */; };
 		925779291D92221600AFD16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925779281D92221600AFD16E /* AppDelegate.swift */; };
 		925779301D92221600AFD16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9257792F1D92221600AFD16E /* Assets.xcassets */; };
 		925779331D92221600AFD16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925779311D92221600AFD16E /* LaunchScreen.storyboard */; };
@@ -72,7 +71,6 @@
 		3E0B5A691D9521A000E8803D /* WBStatusPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBStatusPicture.swift; path = SwiftThreeForWeibo/Class/Tools/WBStatusPicture.swift; sourceTree = SOURCE_ROOT; };
 		3E0B5A6B1D9521F800E8803D /* WBDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBDate+Extensions.swift"; sourceTree = "<group>"; };
 		3E0B5A6D1D95224900E8803D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		3E0B5AA91D95253C00E8803D /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBStatusListViewModel.swift; path = SwiftThreeForWeibo/Class/Tools/Extensions/WBStatusListViewModel.swift; sourceTree = SOURCE_ROOT; };
 		925779251D92221600AFD16E /* SwiftThreeForWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftThreeForWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925779281D92221600AFD16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9257792F1D92221600AFD16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,7 +318,6 @@
 		9257795F1D92249D00AFD16E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3E0B5AA91D95253C00E8803D /* WBStatusListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -619,7 +616,6 @@
 				925779D61D92A01B00AFD16E /* NSString+CZHash.m in Sources */,
 				92D3526B1D937ABE00156BE9 /* WBVisitorView.swift in Sources */,
 				3E0B5A6A1D9521A000E8803D /* WBStatusPicture.swift in Sources */,
-				3E0B5AAA1D95253C00E8803D /* WBStatusListViewModel.swift in Sources */,
 				925779B71D92994600AFD16E /* WBDemoViewController.swift in Sources */,
 				3E0B5A6E1D95224900E8803D /* String+Extensions.swift in Sources */,
 				9257796D1D92256F00AFD16E /* ProfileViewController.swift in Sources */,
